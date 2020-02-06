@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {Pie} from 'react-chartjs-2';
-import {markerDummyData} from "../../map-components/data";
 
 
 export default function BarGraph ({selected}){
     const [data, setData] = useState({})
-  // console.log(selected, 'selected')
     useEffect( () => {
       let data = selected[0]
       let labels = []
@@ -22,8 +20,6 @@ export default function BarGraph ({selected}){
           backgroundColors.push(  '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6))
         });
         
-        // console.log(labels);
-        // console.log(amount);
         var newState = {
           labels: [],
           datasets:[
@@ -36,7 +32,6 @@ export default function BarGraph ({selected}){
             }
           ]
       }
-        // console.log(newState, 'new State')
         newState.labels = labels
         newState.datasets[0].data = amount
         newState.datasets[0].backgroundColor = backgroundColors;
@@ -69,6 +64,34 @@ export default function BarGraph ({selected}){
             legend:{
               display:defaultProps.displayLegend,
               position:defaultProps.legendPosition
+            },
+            scales: {
+              xAxes: [ {
+                
+                display: true,
+                gridLines: {
+                  display:false,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Cost'
+                },
+              } 
+              ],
+              yAxes: [ {
+                display: true,
+                gridLines: {
+                  display:false,
+                },
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Percent',
+                  ticks: {
+                    beginAtZero: true
+                  }
+                },
+
+              } ]
             }
           }}
         />

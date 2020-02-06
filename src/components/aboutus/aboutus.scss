@@ -1,66 +1,266 @@
+//mobile first 
 
-//setting margin of the container for this page until nav is fixed
+
 .aboutUs{
-    margin-top: 10%;
-
-}
-
-//headers
-
-h1{
-    font-size: 3.2rem;
-}
-h3{
-    text-align: center;
-    font-size: 2rem;
-}
-
-//all sections
-.leadership-design, .web, .ds{
-    margin-bottom: 5%;
-}
- .ds, .web{
-    width: 100%;
     display:flex; 
-    justify-content: space-around;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+
+     //arrows
+    .left-arrow {
+        border-color: transparent #3999fc;
+        border-style: solid;
+        border-width: 10px 10px 10px 0px;
+        height: 0px;
+        width: 0px;
+        cursor:pointer;
+        
+    }
 
     .member{
-        width: 20%;
+        .aboutus-title{
+            text-align:center;
+            font-size: .7rem; 
+
+            @media screen and (min-width: 400px){
+                font-size: 1rem; 
+            }
+
+            @media screen and (min-width: 1200px){
+                font-size: 1.9rem; 
+            }
+
+            @media screen and (min-width: 600px){
+                font-size: .8rem; 
+            }
+
+            @media screen and (min-width: 900px){
+                font-size: 1.2rem; 
+            }
+            @media screen and (min-width: 1200px){
+                font-size: 1.3rem; 
+            }
+
+            @media screen and (min-width: 2000px){
+                font-size: 1.8rem; 
+            }
+            
+        }
+    
+        .member-display{
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (min-width: 900px){
+            flex-direction: row; 
+        }
+
+            .member-photo{
+                width:90%;
+                img{
+                    width: 100%; 
+                    border-radius:10px;
+                }
+
+                @media screen and (min-width:400px){
+                   
+                        width:60%;
+                    
+                }
+
+                @media screen and (min-width: 500px){
+                    width: 45%; 
+                }
+
+                @media screen and (min-width: 700px){
+                    width: 30%; 
+                }
+            }
+
+            .member-info{
+                border-left: 1px solid #3999fc;
+                align-items: center;
+                align-content: center;
+                padding: 0 4%;
+                width:100%;
+                border-left: none;
+
+                @media screen and (min-width: 900px){
+                    border-left: 1px solid #3999fc;
+                    width: 50%; 
+                }
+
+                @media screen and (min-width: 1200px){
+                    width: 42%; 
+                }
+
+            
+
+                .name-role{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;   
+                    font-size: .6rem;
+
+                    @media screen and (min-width: 600px){
+                        font-size: 1rem; 
+                    }
+                    @media screen and (min-width: 1000px){
+                        font-size: .9rem;
+                    }
+
+                    @media screen and (min-width: 1200px){ 
+                        font-size: 2rem; 
+                    }
+
+                    .member-name{
+                        
+                        font-weight: 500;
+                        margin: 0;
+
+                       
+                    }
+
+                    .member-role{
+                        
+                        font-weight: 100; 
+                        margin:1%;
+                        border-left: 1px solid #3999fc;
+                        padding-left: 1.5%;
+
+                    }
+                }
+
+                .member-social{
+                    display: flex;
+                    justify-content: center;
+                    svg{
+                        height: 1.3rem;
+
+                        @media screen and (min-width: 1000px){
+                            height: 1.7rem; 
+                        }
+
+                        @media screen and (min-width: 2000px){
+                            height: 2.4rem; 
+                        }
+                    }
+
+                    @media screen and (min-width: 1200px){
+                        justify-content: space-evenly;
+                        align-items: center;
+                        width: 43%;
+                        margin: auto;
+                    }
+                }
+
+                .member-about{
+                    font-size: .7rem;
+                    margin: 2%;
+
+                    @media screen and (min-width: 900px){
+                        font-size: .9rem;
+                    }
+
+                    @media screen and (min-width: 1200px){ 
+                        font-size: 1.2rem; 
+                    }
+
+                    @media screen and (min-width: 2000px){
+                        font-size: 1.5rem;
+                    }
+                }
+            
+                .member-portfolio{
+                    border-radius: 5px;
+                    font-size: .7rem;
+                    padding: 2.5% 1%;
+                    text-align: center;
+                    border: 1px solid #3999fc; 
+                    color: #3999fc; 
+                    cursor: pointer;
+                    margin:auto;
+    
+                    &:hover{
+                        color: white; 
+                        background: #3999fc; 
+                            
+                            
+                    }
+                    
+                    @media screen and (min-width: 325px){
+                        width: 80%; 
+                    }
+
+                    @media screen and (min-width: 600px){
+                        width:60%; 
+                    }
+
+                    @media screen and (min-width: 900px){
+                        width: 75%; 
+                    }
+                    
+                    @media screen and (min-width: 1200px){
+                        font-size: 1rem; 
+                    }
+                    
+                    @media screen and (min-width: 2000px){
+                        font-size: 1.5rem;
+                    }
+                }
+            
+                
+            }    
+        }  
+
+    }
+
+    .right-arrow {
+        border-color: transparent #3999fc;
+        border-style: solid;
+        border-width: 10px 0px 10px 10px;
+        height: 0px;
+        width: 0px;
+        cursor:pointer;
+        
+    }
+  
+}
+
+//modal container
+.modal{
+    padding:.5rem;
+}
+.modal-overlay{
+    width:98vw;
+}
+.modal-wrapper{
+    height:90%;; 
+    .modal{
+        max-width: 90vw
     }
 }
 
-// container for leadership-design
-.leadership-design{
-    display:flex; 
-    width:100%;
-    justify-content: space-around; 
-    margin:auto;
-    
-    .member{
-        width:70%; 
-        margin: auto;
-        text-align: center;
-    
-    }
-}
-//data scientists
-.ds{
-   
-}
-
-//web developers
-.web{
-    
-    flex-wrap: wrap;
-    
-    .member{
-        margin: 3%;
-    }
-
-}
 
 
-img{
-    width:100%;
-}
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
